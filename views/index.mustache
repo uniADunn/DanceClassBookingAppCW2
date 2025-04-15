@@ -2,20 +2,17 @@
     <head>
         {{>header}}
     </head>
-    <body class="container bg-dark">
-        <div class="card mt-1 p-2 bg-info">
-        <!--start of website heading-->
-                {{>websiteHeading}}   
-         
-        <!--end of website heading-->
-        
-        <!--start of main content-->
-                {{>introIndexContent}}
-        
-                {{>classNcourses}}
-        <!--end of main content-->
+    <body class="bg-dark">
+        <div class="container">
+            <div class="card bg-info ">
+                <div class="card-body mx-3 mt-3 rounded-top bg-warning">
+                    {{>websiteHeading}}
+                    {{>buttonsIndex}}
+                    {{>introIndexContent}}
+                    {{>classNcourses}} 
+                </div>
+            </div>
         </div>
-        
 
     </body>
 </html>

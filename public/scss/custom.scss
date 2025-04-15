@@ -1,0 +1,23 @@
+
+$primary:   #2d6a4f;   
+$secondary: #6610f2;  
+$success:   #28a745;  
+$info:      #164e57;  
+$warning:   #9cc5a1;  
+$danger:    #a4161a;  
+$light:     #d8f3dc;  
+$dark:      #1f2421; 
+
+
+
+@use "../../node_modules/bootstrap/scss/bootstrap.scss" with(
+  $primary:    $primary,
+  $secondary:  $secondary,
+  $success:    $success,
+  $info:       $info,
+  $warning:    $warning,
+  $danger:     $danger,
+  $light:      $light,
+  $dark:       $dark,
+);
+

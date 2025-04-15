@@ -22,7 +22,7 @@ class ClassesDAO{
             let classTitle1 = 'Beginner Waltz Class';
             let classTitle2 = 'Salsa for Beginners';
             let classTitle3 = 'Highland Dance Workshop'
-            let ClassTitle4 = 'Street Dance intermediate';
+            let classTitle4 = 'Street Dance intermediate';
             let classTitle5 = 'Ballroom and Latin Expert class'
 
             let startDate1 = '2025-07-15';

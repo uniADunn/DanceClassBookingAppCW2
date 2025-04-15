@@ -19,20 +19,61 @@ class ClassesDAO{
     init(){
         console.log('populating courses...');
         try{
-            let classTitle = 'jazz course';
-            let start_date = new Date().toISOString().split('T')[0];
-            let start_time = 1200;
-            let duration = 2
-            let location = 'bellshill dance studio';
-            let description = 'some descriptive text about the dance class.';
-            let cost = 12.50;
+            let classTitle1 = 'Beginner Waltz Class';
+            let classTitle2 = 'Salsa for Beginners';
+            let classTitle3 = 'Highland Dance Workshop'
+            let ClassTitle4 = 'Street Dance intermediate';
+            let classTitle5 = 'Ballroom and Latin Expert class'
 
-            this.create(classTitle, start_date, start_time, duration, location, description, cost);
-            this.create(classTitle, start_date, start_time, duration, location, description, cost);
-            this.create(classTitle, start_date, start_time, duration, location, description, cost);
-            this.create(classTitle, start_date, start_time, duration, location, description, cost);
-            console.log(`class inserted: ${classTitle}`);
-            console.log('poplating complete.');
+            let startDate1 = '2025-07-15';
+            let startDate2 = '2025-05-16';
+            let startDate3 = '2025-04-29';
+            let startDate4 = '2025-05-28';
+            let startDate5 = '2025-07-05';
+
+            let startTime1 = 1800;
+            let startTime2 = 1200;
+            let startTime3 = 1500;
+            let startTime4 = 1600;
+            let startTime5 = 1300;
+
+            let duration1 = 3;
+            let duration2 = 2;
+            let duration3 = 7;
+            let duration4 = 5;
+            let duration5 = 8;
+
+            let location1 = 'Hamilton Dance Studio';
+            let location2 = 'coatbridge community hall';
+            let location3 = 'airdrie arts center'
+            let location4 = 'Motherwell center lanarkshire';
+            let location5 = 'East Kilbride Dance Academy';
+
+            let description1 = 'Learn the elegant basics of the waltz in a relaxed, friendly setting. Perfect for first-time dancers';
+            let description2 = 'Spicy, fun, and energetic—discover the joy of salsa with our expert instructors';
+            let description3 = 'Traditional Scottish highland dance techniques for all skill levels. Tartan optional';
+            let description4 = 'Get moving with urban dance styles—great for fitness and fun';
+            let description5 = 'Polish off techniques for ballroom and Latin dances in this lively introductory session';
+
+            let cost1 = 11.11;
+            let cost2 = 15.66;
+            let cost3 = 7;
+            let cost4 = 16.20;
+            let cost5 = 56;
+
+            this.create(classTitle1, startDate1, startTime1, duration1, location1, description1, cost1);
+            this.create(classTitle2, startDate2, startTime2, duration2, location2, description2, cost2);
+            this.create(classTitle3, startDate3, startTime3, duration3, location3, description3, cost3);
+            this.create(classTitle4, startDate4, startTime4, duration4, location4, description4, cost4);
+            this.create(classTitle5, startDate5, startTime5, duration5, location5, description5, cost5);
+
+            console.log(`class1 inserted: ${classTitle1}`);
+            console.log(`class2 inserted: ${classTitle2}`);
+            console.log(`class3 inserted: ${classTitle3}`);
+            console.log(`class4 inserted: ${classTitle4}`);
+            console.log(`class5 inserted: ${classTitle5}`);
+
+            console.log('poplating classes complete.\n');
         }catch(err){
             console.log(`Error: ${err.message}`);
         }
@@ -156,6 +197,6 @@ class ClassesDAO{
     }
 }
 const dao = new ClassesDAO({filename: './data_store/danceClass.db'});
-// dao.init();
+dao.init(); //populate classes
 
 module.exports = dao;

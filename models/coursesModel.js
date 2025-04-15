@@ -21,21 +21,68 @@ class CoursesDAO{
         console.log('populating courses...');
         try{
             //set data
-            let course_title = 'jazz class';
-            let start_date = new Date().toISOString().split('T')[0];
-            let course_duration = 12;
-            let class_start_time = 1200;
-            let class_duration = 2
-            let location = 'bellshill dance studio';
-            let description = 'some descriptive text about the dance class.';
-            let cost = 12.50;
-            //create course using db method
-            this.create(course_title, start_date, course_duration, class_start_time, class_duration, location, description, cost);
-            this.create(course_title, start_date, course_duration, class_start_time, class_duration, location, description, cost);
-            this.create(course_title, start_date, course_duration, class_start_time, class_duration, location, description, cost);
-            this.create(course_title, start_date, course_duration, class_start_time, class_duration, location, description, cost);
-            console.log(`course inserted: ${classTitle}`);
-            console.log('course poplating complete.');
+            let courseTitle1 = 'Ballet Fundamentals';
+            let courseTitle2 = 'breakdance beginner to expert';
+            let courseTitle3 = 'Kids Creative Dance';
+            let courseTitle4 = 'Family Line Dancing';
+            let courseTitle5 = 'Wedding Day Dance';
+            
+            let startDate1 = '2025-07-15';
+            let startDate2 = '2025-05-16';
+            let startDate3 = '2025-04-29';
+            let startDate4 = '2025-05-28';
+            let startDate5 = '2025-07-05';
+            
+            let courseDuration1 =  12;
+            let courseDuration2 =  26;
+            let courseDuration3 =  7;
+            let courseDuration4 =  6;
+            let courseDuration5 =  6;
+
+            let classStartTime1 = 1500;
+            let classStartTime2 = 1700;
+            let classStartTime3 = 1400;
+            let classStartTime4 = 2000;
+            let classStartTime5 = 1600;
+
+            let classDuration1 = 2;
+            let classDuration2 = 4;
+            let classDuration3 = 3;
+            let classDuration4 = 2;
+            let classDuration5 = 5;
+
+            let location1 = 'Lanarkshire Dance Academy';
+            let location2 = 'Bellshill Dance Studio';
+            let location3 = 'Coatbridge Community Center';
+            let location4 = 'east kilbride arts center';
+            let location5 = 'Uddingston Dance Hall';
+
+            let description1 = 'Build a strong foundation in classical ballet with expert guidance Perfect for beginners this course focuses on posture technique and grace in a supportive environment';
+            let description2 = 'From floor spins to power moves learn breaking step by step in this high-energy course No experience needed just enthusiasm';
+            let description3 = 'A playful introduction to movement for little ones Through games and music children explore rhythm coordination and self expression';
+            let description4 = 'Boot scootin fun for all ages Learn classic line dances together in a lively inclusive atmosphere No partners required';
+            let description5 = 'Nail your first dance with confidence Tailored for couples this class covers choreography basics to shine on your big day';
+
+            let cost1 = 123;
+            let cost2 = 222.22;
+            let cost3 = 120;
+            let cost4 = 50;
+            let cost5 = 399.99;
+
+            
+            this.create(courseTitle1, startDate1, courseDuration1, classStartTime1, classDuration1, location1, description1, cost1);
+            this.create(courseTitle2, startDate2, courseDuration2, classStartTime2, classDuration2, location2, description2, cost2);
+            this.create(courseTitle3, startDate3, courseDuration3, classStartTime3, classDuration3, location3, description3, cost3);
+            this.create(courseTitle4, startDate4, courseDuration4, classStartTime4, classDuration4, location4, description4, cost4);
+            this.create(courseTitle5, startDate5, courseDuration5, classStartTime5, classDuration5, location5, description5, cost5);
+
+
+            console.log(`course inserted: ${courseTitle1}`);
+            console.log(`course inserted: ${courseTitle2}`);
+            console.log(`course inserted: ${courseTitle3}`);
+            console.log(`course inserted: ${courseTitle4}`);
+            console.log(`course inserted: ${courseTitle5}`);
+            console.log('poplating course complete.\n');
         }catch(err){
             console.log(`Error: ${err.message}`);
         }
@@ -161,5 +208,5 @@ class CoursesDAO{
     }
 }
 const dao = new CoursesDAO({filename: './data_store/danceCourses.db'});
-// dao.init();
+dao.init(); //populate courses
 module.exports = dao;

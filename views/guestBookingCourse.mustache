@@ -2,8 +2,16 @@
     <head>
         {{>header}}
     </head>
-    <body class="container bg-dark">
-    {{>websiteHeading}}
+    <body class="bg-dark">
+        <div class="container">
+            <div class="card bg-info">
+                <div class="card-body mx-3 mt-3 rounded-top bg-warning">
+                    {{>websiteHeading}}
+                    {{>buttonsIndex}}
+                </div>
+            </div>
+        </div>
+
     {{#courseDetails}}
 
     <section class="container rounded bg-info mb-2 p-2">

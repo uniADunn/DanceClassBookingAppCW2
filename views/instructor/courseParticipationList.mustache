@@ -2,13 +2,16 @@
     <head>
         {{>header}}
     </head>
-    <body class="container bg-dark">
-        {{>websiteHeading}}
-        
-        {{>instructor/courseDetailsParticipationHeader}}
-        {{>instructor/courseParticipantList}}
-
-        
+    <body class=" bg-dark">
+        <div class="container">
+            <div class="card bg-info">
+                <div class="card-body mx-3 mt-3 rounded-top bg-warning"
+                    {{>websiteHeading}}
+                    {{>buttonsIndex}}
+                    {{>instructor/courseDetailsParticipationHeader}}
+                    {{>instructor/courseParticipantList}}
+                </div>  
+            </div>
         </div>
     </body>
 </html>

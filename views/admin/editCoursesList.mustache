@@ -25,37 +25,30 @@
                                     <div class="row">
                                         <div class="col ">
                                             <div class="row">
-                                                <div class="card-header d-flex rounded  bg-warning">                            
-                                                    <div class="col">
-                                                        <div class="card-text  mb-0 rounded">                   
-                                                            <h4 class="inline m-0 text-capitalize">{{course_title}}</h4>
-                                                        </div>
-                                                        <div class="col text-end">
-                                                            <h4>Cost: £{{cost}}</h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <div class="card-header  rounded-top  bg-warning ">                            
+                                <div class="row rounded d-flex justify-content-between">                                
+                                    <div class="col text-left">                
+                                        <h4 class="fw-bold text-capitalize">{{course_title}}</h4>
+                                    </div>
+                                    <div class="col text-end">
+                                        <h4>Cost: £{{cost}}</h4>
+                                    </div>                                    
+                                </div>               
+                            </div>    
                                             </div>
                                         <div class="row">                        
-                                            <div class="col-md-6">
+                                            <div class="col-md-8">
                                                 <div class="form-group">
-                                                    <label class="font-weight-bold" for="location">Course Location:</label>
+                                                    <label class="fw-bold" for="location">Course Location:</label>
                                                     <div class="form-text bg-light m-0 rounded">
                                                         <label class="m-1 p-1">{{location}}</label>
                                                     </div>                               
                                                 </div>                        
                                             </div>                            
-                                            <div class="col-md-3">
+                                            
+                                            <div class="col-md-4">
                                                 <div class="form-group">
-                                                    <label class="font-weight-bold" for="courseDuration">Course Duration:</label>
-                                                    <div class="form-text text-right bg-light m-0 rounded">
-                                                        <label class="m-1 p-1">{{course_duration}} (weeks)</label>
-                                                    </div>                                                        
-                                                </div>                    
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <label class="font-weight-bold" for="courseStartDate">Course Start Date:</label>
+                                                    <label class="fw-bold" for="courseStartDate">Course Start Date:</label>
                                                     <div class="form-text bg-light m-0 rounded">
                                                         <label class="m-1 p-1">{{start_date}}</label>
                                                     </div>                                
@@ -64,18 +57,28 @@
                                         </div>
 
                                         <div class="row">
+
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label class="fw-bold" for="courseDuration">Course Duration:</label>
+                                                    <div class="form-text text-right bg-light m-0 rounded">
+                                                        <label class="m-1 p-1">{{course_duration}} (weeks)</label>
+                                                    </div>                                                        
+                                                </div>                    
+                                            </div>
+
                                             <div class="col">
                                                 <div class="form-group">
-                                                    <label class="font-weight-bold" for="classStartTime">class Start Time:</label>
+                                                    <label class="fw-bold" for="classStartTime">class Start Time:</label>
                                                 </div>                                                
                                                 <div class="form-text bg-light m-0 rounded">
                                                     <label class="m-1 p-1">{{class_start_time}}</label>
                                                 </div>                                    
                                             </div>
-                                        </div>
+                                        
                                         <div class="col">
                                             <div class="form-group">
-                                                <label class="font-weight-bold" for="classDuration">Class Duration:</label>
+                                                <label class="fw-bold" for="classDuration">Class Duration:</label>
                                             </div>
                                             <div class="form-text text-right bg-light m-0 rounded">
                                                 <label class="m-1 p-1">{{class_duration}} (hrs/class)</label>
@@ -87,9 +90,9 @@
                                 <div class="row">
                                     <div class="col-md-6">                        
                                         <div class="form-group ">
-                                            <label class="font-weight-bold" for="description">Course Description</label>
+                                            <label class="fw-bold" for="description">Course Description</label>
                                             <textarea  type="text"
-                                                class="form-control"
+                                                class="bg-light form-control"
                                                 id="description"
                                                 name="description"                                                                                
                                                 rows="4"
@@ -99,10 +102,10 @@
                                     </div>
 
                         
-                                    <div class="col-md-6">
-                                        <div class="row justify-content-between">
+                                    <div class="col-md-2">
+                                        <div class="row d-flex justify-content-between">
                                             <div class="form-group ">
-                                                <label class="font-weight-bold" for="cost">Participants Booked:</label>
+                                                <label class="fw-bold" for="cost">Participants Booked:</label>
                                             </div>
                                             <div class="form-text text-right bg-light m-0 rounded">
                                                 <label class="m-1 p-1">{{totalCount}}</label>
@@ -110,15 +113,15 @@
                                         </div>                            
                                     </div>
 
-                                    <div class="col ">
+                                    <div class="col-md-4 ">
                                             <div class="card-body h-100 p-1 d-flex justify-content-end">
                                                 <form class="mb-0" method="GET" action="/auth/editCourse/{{_id}}">
                                         
                                                     <div class="card-text d-flex flex-column h-100 justify-content-end">                            
                                                         <div class="card-text text-end w-100">     
-                                                            <div class="card-text p-1 mt-1">
-                                                                <a href="/auth/courseParticipants/{{_id}}" id="removeBtn" type="submit" class="btn btn-primary w-100 mb-1">view participants</a>                                                                                            
-                                                                <button id="editBtn" type="submit" class="btn btn-primary w-100 mb-1">Edit</button>                                
+                                                            <div class="card-text mt-3 p-1">
+                                                                <a href="/auth/courseParticipants/{{_id}}" id="removeBtn" type="submit" class="btn btn-dark border border-success rounded w-100 mb-1">view participants</a>                                                                                            
+                                                                <button id="editBtn" type="submit" class="btn btn-secondary text-white border border-success rounded w-100 mb-1">Edit</button>                                
                                                                 <a href="/auth/deleteCourse/{{_id}}" id="removeBtn" type="submit" class="mb-1 bg-danger btn btn-primary w-100">Delete</a>
                                                             </div>                
                                                         </div>

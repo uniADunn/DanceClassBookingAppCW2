@@ -2,8 +2,12 @@
     <head>
         {{>header}}
     </head>
-    <body class="container bg-dark">
+    <body class="bg-dark">
+        <div class="container">
+            <div class="card bg-info">
+                <div class="card-body mx-3 mt-3 rounded-top bg-warning"
         {{>websiteHeading}}
+        {{>buttonsIndex}}
         
         
 
@@ -23,9 +27,9 @@
                     <div class="row">
                         <div class="col">
                             <div class="form-group">
-                                <label class="font-weight-bold" for="classTitle">Class Title:</label>
+                                <label class="fw-bold" for="classTitle">Class Title:</label>
                                 <input  type="text"
-                                        class="form-control {{#errors.classTitle}}is-invalid{{/errors.classTitle}}"
+                                        class=" bg-light form-control {{#errors.classTitle}}is-invalid{{/errors.classTitle}}"
                                         id="classTitle"
                                         name="classTitle"
                                         value="{{class_title}}"
@@ -39,9 +43,9 @@
                         </div>
                         <div class="col">
                             <div class="form-group">
-                                <label class="font-weight-bold" for="location">Class Location:</label>
+                                <label class="fw-bold" for="location">Class Location:</label>
                                 <input  type="text"
-                                        class="form-control {{#errors.location}}is-invalid{{/errors.location}}"
+                                        class="bg-light form-control {{#errors.location}}is-invalid{{/errors.location}}"
                                         id="location"
                                         name="location"
                                         title="minimum of 8 characters"
@@ -57,9 +61,9 @@
                     <div class="row">
                         <div class="col">
                             <div class="form-group">
-                                <label class="font-weight-bold" for="startDate">Start Date:</label>
+                                <label class="fw-bold" for="startDate">Start Date:</label>
                                 <input  type="date"
-                                        class="form-control {{#errors.startDate}}is-invalid{{/errors.startDate}}"
+                                        class="bg-light form-control {{#errors.startDate}}is-invalid{{/errors.startDate}}"
                                         id="startDate"
                                         name="startDate"
                                         value="{{start_date}}"
@@ -74,9 +78,9 @@
                         </div>
                             <div class="col">
                                 <div class="form-group">
-                                    <label class="font-weight-bold" for="startTime">Start Time:</label>
+                                    <label class="fw-bold" for="startTime">Start Time:</label>
                                     <input  type="time"
-                                            class="form-control {{#errors.startTime}}is-invalid{{/errors.startTime}}"
+                                            class="bg-light form-control {{#errors.startTime}}is-invalid{{/errors.startTime}}"
                                             id="startTime"
                                             name="startTime"
                                             value="{{start_time}}"
@@ -95,9 +99,9 @@
                     <div class="row">
                         <div class="col">
                             <div class="form-group">
-                                <label class="font-weight-bold" for="duration">Duration:</label>
+                                <label class="fw-bold" for="duration">Duration:</label>
                                 <input  type="number"
-                                        class="form-control {{#errors.duration}}is-invalid{{/errors.duration}}"
+                                        class="bg-light form-control {{#errors.duration}}is-invalid{{/errors.duration}}"
                                         id="duration"
                                         name="duration"
                                         min="1"
@@ -114,9 +118,9 @@
                         </div>
                         <div class="col">
                             <div class="form-group">
-                                <label class="font-weight-bold" for="cost">Cost (£):</label>
+                                <label class="fw-bold" for="cost">Cost (£):</label>
                                 <input  type="decimal"
-                                        class="form-control text-end {{#errors.cost}}is-invalid{{/errors.cost}}"
+                                        class="bg-light form-control text-end {{#errors.cost}}is-invalid{{/errors.cost}}"
                                         id="cost"
                                         name="cost"
                                         title="minimum of 8 characters"
@@ -133,14 +137,13 @@
                     <div class="row">
                         <div class="col">
                             <div class="form-group ">
-                                <label class="font-weight-bold" for="description">Class Description</label>
+                                <label class="fw-bold" for="description">Class Description</label>
                                 <textarea  type="text"
-                                        class="form-control {{#errors.description}}is-invalid{{/errors.description}}"
+                                        class="bg-light form-control {{#errors.description}}is-invalid{{/errors.description}}"
                                         id="description"
                                         name="description"
-                                        title="minimum of 8 characters"                                        
-                                        rows="4"
-                                        
+                                        title="brief description of dance class"                                        
+                                        rows="4"                                        
                                         placeholder="enter description" required>{{description}}</textarea>
                                 <!--add error validation placeholder here -->
                                 {{#errors.description}}

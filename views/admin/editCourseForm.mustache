@@ -2,8 +2,15 @@
     <head>
         {{>header}}
     </head>
-    <body class="container bg-dark">
-        {{>websiteHeading}}
+    <body class="bg-dark">
+        <div class="container">
+            <div class="card bg-info">
+                <div class="card-body mx-3 mt-3 rounded-top bg-warning"
+                    {{>websiteHeading}}
+                    {{>buttonsIndex}}
+                </div>
+            </div>
+        </div>
         {{#courseDetails}}
         <section class="container rounded bg-info mb-2 p-2">
         <div class="row">
@@ -14,7 +21,7 @@
                 <h2 class="m-0 text-capitalize">edit dance course form</h2>
             </div>
         </div>
-            <div class="card-body mt-2 bg-info border border-dark rounded">
+            <div class="card-body mt-2 bg-primary border border-dark rounded">
             <div class="card-text p-2">
                     <!-- start of form-->
                     <form method="POST" action="/auth/postEditCourse/{{_id}}" class="mb-0">
@@ -23,9 +30,9 @@
                     <!-- course title, col 1 -->
                         <div class="col">
                             <div class="form-group">
-                                <label class="font-weight-bold" for="courseTitle">Course Title:</label>
+                                <label class="fw-bold" for="courseTitle">Course Title:</label>
                                 <input  type="text"
-                                        class="form-control {{#errors.courseTitle}}is-invalid{{/errors.courseTitle}}"
+                                        class="bg-light form-control {{#errors.courseTitle}}is-invalid{{/errors.courseTitle}}"
                                         id="courseTitle"
                                         name="courseTitle"
                                         value="{{course_title}}"
@@ -41,9 +48,9 @@
                         <!-- course location, col 2 -->
                         <div class="col">
                             <div class="form-group">
-                                <label class="font-weight-bold" for="location">Course Location:</label>
+                                <label class="fw-bold" for="location">Course Location:</label>
                                 <input  type="text"
-                                        class="form-control {{#errors.location}}is-invalid{{/errors.location}}"
+                                        class="bg-light form-control {{#errors.location}}is-invalid{{/errors.location}}"
                                         id="location"
                                         name="location"
                                         title="minimum of 8 characters"
@@ -59,9 +66,9 @@
                         <!-- course duration, col 3 -->
                         <div class="col">
                             <div class="form-group">
-                                <label class="font-weight-bold" for="courseDuration">Course Duration:</label>
+                                <label class="fw-bold" for="courseDuration">Course Duration:</label>
                                 <input  type="number"
-                                        class="form-control {{#errors.courseDuration}}is-invalid{{/errors.courseDuration}}"
+                                        class="bg-light form-control {{#errors.courseDuration}}is-invalid{{/errors.courseDuration}}"
                                         id="courseDuration"
                                         name="courseDuration"
                                         min="6"
@@ -84,9 +91,9 @@
                         <!-- course start date, row 2: col 1 -->
                         <div class="col">
                             <div class="form-group">
-                                <label class="font-weight-bold" for="courseStartDate">Course Start Date:</label>
+                                <label class="fw-bold" for="courseStartDate">Course Start Date:</label>
                                 <input  type="date"
-                                        class="form-control {{#errors.courseStartDate}}is-invalid{{/errors.courseStartDate}}"
+                                        class="bg-light form-control {{#errors.courseStartDate}}is-invalid{{/errors.courseStartDate}}"
                                         id="courseStartDate"
                                         name="courseStartDate"
                                         value="{{start_date}}"
@@ -103,9 +110,9 @@
                             <!-- class start time, row 2: col 2 -->
                             <div class="col">
                                 <div class="form-group">
-                                    <label class="font-weight-bold" for="classStartTime">class Start Time:</label>
+                                    <label class="fw-bold" for="classStartTime">class Start Time:</label>
                                     <input  type="time"
-                                            class="form-control {{#errors.classStartTime}}is-invalid{{/errors.classStartTime}}"
+                                            class="bg-light form-control {{#errors.classStartTime}}is-invalid{{/errors.classStartTime}}"
                                             id="classStartTime"
                                             name="classStartTime"
                                             value="{{class_start_time}}"
@@ -124,9 +131,9 @@
 
                             <div class="col">
                             <div class="form-group">
-                                <label class="font-weight-bold" for="classDuration">Class Duration:</label>
+                                <label class="fw-bold" for="classDuration">Class Duration:</label>
                                 <input  type="number"
-                                        class="form-control {{#errors.classDuration}}is-invalid{{/errors.classDuration}}"
+                                        class="bg-light form-control {{#errors.classDuration}}is-invalid{{/errors.classDuration}}"
                                         id="classDuration"
                                         name="classDuration"
                                         min="1"
@@ -143,11 +150,11 @@
                         </div>                   
                     </div><!-- end of row 2 start date and time -->
                     <div class="row">
-                    <div class="col">
+                    <div class="col-md-6">
                             <div class="form-group ">
-                                <label class="font-weight-bold" for="description">Course Description</label>
+                                <label class="fw-bold" for="description">Course Description</label>
                                 <textarea  type="text"
-                                        class="form-control {{#errors.description}}is-invalid{{/errors.description}}"
+                                        class="bg-light form-control {{#errors.description}}is-invalid{{/errors.description}}"
                                         id="description"
                                         name="description"
                                         title="minimum of 8 characters"                                        
@@ -161,11 +168,11 @@
                             
                         </div>
                         <!-- add class duration-->
-                        <div class="col">
+                        <div class="col-md-6 d-flex">
                             <div class="form-group">
-                                <label class="font-weight-bold" for="cost">Cost (£):</label>
+                                <label class="fw-bold" for="cost">Cost (£):</label>
                                 <input  type="decimal"
-                                        class="form-control text-end {{#errors.cost}}is-invalid{{/errors.cost}}"
+                                        class="bg-light form-control text-end {{#errors.cost}}is-invalid{{/errors.cost}}"
                                         id="cost"
                                         name="cost"
                                         title="minimum of 8 characters"
@@ -177,19 +184,14 @@
                                     <div class="invalid-feedback">{{errors.cost.msg}}</div>
                                 {{/errors.cost}}
                             </div>
-                            <div class="row">
-                        
-                        <div class="col align-content-end">
-                            <div class="form-group d-flex justify-content-end align-content-end">
-                                <div class="align-content-end">
-                                    <button type=submit class="btn btn-secondary">Save</button>
-                                </div>
-                            </div>
                         </div>
-                    </div><!--end of row description and submit button-->
-                        </div>
-                        
                     </div><!-- end of row 3 duration and cost -->
+                    
+                    <div class="row mt-3">
+                        <div class="col text-end">
+                            <button type="submit" class="btn btn-secondary border border-success rounded text-white">Save</button>
+                        </div>
+                    </div>
                     
                     </form>
 
@@ -197,7 +199,6 @@
             </div>
             {{/courseDetails}}   
             </div>
-            {{! </div>             }}
         </div>
         </div>
         </section>

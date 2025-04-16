@@ -7,7 +7,7 @@ exports.validateNewClass = [
       .matches(/^[A-Za-z0-9 ]+$/).withMessage('class title can only contain letters, numbers and spaces. Special characters are invalid'),
   
     body('location')
-      .isLength({ min: 3, max: 25 }).withMessage('location must be between 3 and 25 characters')
+      .isLength({ min: 3, max: 50 }).withMessage('location must be between 3 and 25 characters')
       .matches(/^[A-Za-z0-9 ]+$/).withMessage('location can only contain letters, numbers, and spaces. Special characters are invalid'),
   
     body('startDate')
@@ -33,7 +33,7 @@ exports.validateNewClass = [
       .isCurrency().withMessage('please enter a valid price'),
   
     body('description')
-      .matches(/^[A-Za-z0-9 \r\n]+$/).withMessage('description accepts letters, numbers and spaces.'),
+      .matches(/^[A-Za-z0-9 \r\n]+$/).withMessage('description accepts letters, numbers and spaces. new line breaks'),
   
     (req, res, next) => {
       //get validation results

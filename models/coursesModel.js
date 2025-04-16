@@ -39,11 +39,11 @@ class CoursesDAO{
             let courseDuration4 =  6;
             let courseDuration5 =  6;
 
-            let classStartTime1 = 1500;
-            let classStartTime2 = 1700;
-            let classStartTime3 = 1400;
-            let classStartTime4 = 2000;
-            let classStartTime5 = 1600;
+            let classStartTime1 = '15:00';
+            let classStartTime2 = '17:00';
+            let classStartTime3 = '14:00';
+            let classStartTime4 = '20:00';
+            let classStartTime5 = '16:00';
 
             let classDuration1 = 2;
             let classDuration2 = 4;

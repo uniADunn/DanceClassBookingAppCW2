@@ -31,11 +31,11 @@ class ClassesDAO{
             let startDate4 = '2025-05-28';
             let startDate5 = '2025-07-05';
 
-            let startTime1 = 1800;
-            let startTime2 = 1200;
-            let startTime3 = 1500;
-            let startTime4 = 1600;
-            let startTime5 = 1300;
+            let startTime1 = '18:00';
+            let startTime2 = '12:00';
+            let startTime3 = '15:00';
+            let startTime4 = '16:00';
+            let startTime5 = '13:00';
 
             let duration1 = 3;
             let duration2 = 2;

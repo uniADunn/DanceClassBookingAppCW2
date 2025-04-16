@@ -1,6 +1,7 @@
 # DanceClassBookingAppCW2
 
 - `PORT`: The port the application listens on
+-
 - `SECRET_ACCESS_TOKEN`: Secret string for JWT cookie authentication
 
 ## User Roles and Permissions

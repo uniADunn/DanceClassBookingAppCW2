@@ -1,9 +1,9 @@
 <!-- guest navigation buttons -->
-{{#guest}}
+
         <div class="card rounded mb-2 bg-dark mx-3">
             <div class="row">            
                 <div class="card-body d-flex p-2 mx-2">
-                    <div class="col-6">                
+                    <div class="col">                
                         <div class="card-text d-flex ">
                             <a id="homeBtn" href="/" class="btn btn-primary">Home</a>
                             <a id="classesBtn" href="/show_all_classes" class="mx-2  btn btn-primary">Classes</a>
@@ -11,8 +11,8 @@
                             <a id="coursesBtn" href="/aboutUs" class="mx-2 btn btn-primary">About us</a>
                         </div>
                     </div>
-                    
-                    <div class="col-6">
+            {{#guest}}
+                    <div class="col">
                         <div class="card-text text-end">
                             <a id="registerBtn" href="/register" class="btn btn-primary">Register</a>  
                             <a id="loginBtn" href="/login" class="btn btn-primary">Sign in</a>
@@ -21,56 +21,29 @@
                 </div>
             </div><!-- end of row nav section -->
         </div><!-- end of card body -->
-{{/guest}}  
+        {{/guest}}  
 
 <!-- user navigation buttons -->
-{{#user}}
-    <div class="card rounded-bottom mb-2 bg-dark mx-3">
-            <div class="row">            
-                <div class="card-body d-flex p-2 mx-2">
-                    <div class="col-6">                
-                        <div class="card-text d-flex ">
-                            <a id="homeBtn" href="/" class="btn btn-primary">Home</a>
-                            <a id="classesBtn" href="/show_all_classes" class="mx-2  btn btn-primary">Classes</a>
-                            <a id="coursesBtn" href="/show_all_courses" class="  btn btn-primary">Courses</a>
-                            <a id="coursesBtn" href="/aboutUs" class="mx-2 btn btn-primary">About us</a>
+
+    
+                    {{#user}}
+                    <div class="col">
+                        <div class="card-text text-end">                            
+                            <a id="logoutBtn" href="/auth/logout" class="btn btn-primary">Sign out</a>
                         </div>
                     </div>
-                    
-                        <div class="col-6">
-                            <div class="card-text text-end">                            
-                                <a id="logoutBtn" href="/auth/logout" class="btn btn-primary">Sign out</a>
-                            </div>
-                        </div>
                 </div>
             </div><!-- end of row nav section -->
         </div><!-- end of card body -->
 {{/user}}
-
-
-
-
-<!-- admin navigation buttons -->
 {{#admin}}
-    <div class="card rounded-bottom mb-2 bg-dark mx-3">
-            <div class="row">            
-                <div class="card-body d-flex p-2 mx-2">
-                    <div class="col-5">                
-                        <div class="card-text d-flex ">
-                            <a id="homeBtn" href="/" class="btn btn-primary">Home</a>
-                            <a id="classesBtn" href="/show_all_classes" class="mx-2  btn btn-primary">Classes</a>
-                            <a id="coursesBtn" href="/show_all_courses" class="  btn btn-primary">Courses</a>
-                            <a id="coursesBtn" href="/aboutUs" class="mx-2 btn btn-primary">About us</a>
-                        </div>
-                    </div>
-
-                    <div class="col-2">
-                        <div class="card-text">
+                    <div class="col">
+                        <div class="card-text text-center">
                             <a id="adminCtrl" href="/auth/admin" class="btn btn-primary">Admin Dashboard</a>
                         </div>
                     </div>
                     
-                    <div class="col-5">
+                    <div class="col">
                         <div class="card-text text-end">                            
                             <a id="logoutBtn" href="/auth/logout" class="btn btn-primary">Sign out</a>
                         </div>

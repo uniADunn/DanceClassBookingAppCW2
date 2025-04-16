@@ -8,26 +8,9 @@
                 <div class="card-body mx-3 mt-3 rounded-top bg-warning">
                     {{>websiteHeading}}
                     {{>buttonsIndex}}
+                    {{>admin/feedbackMsgs}}
 
-                    <section class="mx-3">  
-                        {{#success}}
-                            <div class="card-title ">
-                                <div class="card-text bg-dark rounded text-success">
-                                <p class="p-2">{{success}}</p>
-                                </div>
-                            </div>
-                        {{/success}}
-                        {{#fbMsg_success}}
-                            <div class="card-title bg-dark rounded text-success">
-                                <p class="p-2">{{fbMsg_success}}</p>
-                            </div>
-                        {{/fbMsg_success}}
-                        {{#fbMsg_fail}}
-                            <div class="card-title bg-dark rounded text-danger">
-                                <p class="p-2">{{fbMsg_fail}}</p>
-                            </div>
-                        {{/fbMsg_fail}}
-                    </section>
+                    
 
                     
                 {{>admin/adminControlHeader}}

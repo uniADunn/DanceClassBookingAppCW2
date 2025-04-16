@@ -1,5 +1,23 @@
 # DanceClassBookingAppCW2
 
+A web application for booking dance classes and courses.
+
+## Pre-registered Users
+
+### Regular Users
+- **Username:** user1  
+  **Password:** password
+- **Username:** user2  
+  **Password:** password
+
+### Admin User
+- **Username:** admin  
+  **Password:** password
+
+## Environment Configuration
+
+The application requires a `.env` file with the following contents:
+
 - `PORT`: The port the application listens on
 - `SECRET_ACCESS_TOKEN`: Secret string for JWT cookie authentication
 

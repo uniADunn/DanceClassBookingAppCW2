@@ -1,51 +1,29 @@
 # DanceClassBookingAppCW2
-cw2 dance booking app
-this is a small readme file for use of the dance booking app
 
-there are pre-registered users
+- `PORT`: The port the application listens on
+- `SECRET_ACCESS_TOKEN`: Secret string for JWT cookie authentication
 
-REGULAR USER -
-username - user1
-username - user2
+## User Roles and Permissions
 
-ADMIN USER -
-username - admin
+### Guest Role
+Guests can:
+- View home page
+- View about page
+- View all classes
+- View all courses
+- Register as a user
+- Book classes/courses via booking form
 
-all user passwords are: password
+### User Role
+Users can do everything guests can, plus:
+- One-click booking for classes/courses (no form required)
 
-the app requires a .env file
-
-the contents of the .env file are
-
-PORT = 3000 
-SECRET_ACCESS_TOKEN = "a_jwt_secret_string"
-
-the port to listen on
-the secret access token string for the cookie.
-
-ROLES 
-
-Guest Role -
-guest roles can
-    * home page
-    * about page
-    * view all classes
-    * view all courses
-    * register
-    * book class or course via a bookin form
-
-User Role -
-user roles can do the same as guest roles +
-    * book class or course without requireing to use booking form (one click booking)
-
-Admin Role -
-Admin roles can do the same as user roles +
-    * add new classes and courses
-    * add new admininstrators
-    * remove administrators
-    * view class management lists to edit, delete classes
-    * view course management lists to edit, delete courses
-    * view participants for specific courses or classes
-    * remove participants guest or users booked into specific class or courses
-
-
+### Admin Role
+Admins can do everything users can, plus:
+- Add new classes and courses
+- Add/remove administrators
+- View management lists to:
+  - Edit/delete classes
+  - Edit/delete courses
+- View participants for specific courses/classes
+- Remove participants (guests or users) from specific classes/courses

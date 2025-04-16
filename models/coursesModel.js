@@ -208,5 +208,5 @@ class CoursesDAO{
     }
 }
 const dao = new CoursesDAO({filename: './data_store/danceCourses.db'});
-dao.init(); //populate courses
+// dao.init(); //populate courses
 module.exports = dao;

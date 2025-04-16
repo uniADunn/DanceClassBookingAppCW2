@@ -24,7 +24,7 @@ class UserDAO {
             let fname = 'Ashley';
             let lname = 'Dunn';
             let email = "adunn300@caledonian.ac.uk"
-            let uname = "kruel"
+            let uname = "admin"
             let password = 'password';
             let role = 'ADMIN';
             
@@ -38,7 +38,7 @@ class UserDAO {
             // let password1 = 'password1';
             // let role1 = 'USER'
             
-            //create user
+            // // create user
             // this.create(fname1, lname1, email1, uname1, password1, role1);
             // console.log('Populating users complete.');
 

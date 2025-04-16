@@ -197,6 +197,6 @@ class ClassesDAO{
     }
 }
 const dao = new ClassesDAO({filename: './data_store/danceClass.db'});
-dao.init(); //populate classes
+// dao.init(); //populate classes
 
 module.exports = dao;

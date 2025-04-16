@@ -1,2 +1,4 @@
-{"firstname":"Ashley","surname":"Dunn","email":"adunn300@caledonian.ac.uk","username":"kruel","password":"$2b$10$6Bq.SWakjY.1/65q0KfCNeypUwlCOpGPMaACeRbhPE8l32xlwYu4W","role":"ADMIN","_id":"1LW50PrzWAeMqff2"}
-{"firstname":"asdf","surname":"asdf","email":"asdf@asdf.asd","username":"asdfj","password":"$2b$10$mH8oLSId6ThKliA9LeISAu89HAkgmYKgzH5ISeWDCFtcSFxJw6n86","role":"USER","_id":"bmItgKD5Wc0XaNOT"}
+{"firstname":"Ashley","surname":"Dunn","email":"adunn300@caledonian.ac.uk","username":"admin","password":"$2b$10$9HtpaKQ94xUGzQ1xxMcUj.t7rOCyvP0I4lbfypKO1YWDrqwDgBNFq","role":"ADMIN","_id":"9hLTgu1XkFFkQstA"}
+{"firstname":"bob","surname":"human","email":"bob@bob.com","username":"bobby98","password":"$2b$10$jPt5MgjaBHIbGpxy1HdUcOq./99UdOWO94QtcImTO/FfXWwiGffCK","role":"USER","_id":"JTfvtNr9Qudy4Jvw"}
+{"firstname":"first","surname":"user","email":"user@live.com","username":"user1","password":"$2b$10$Fn4JqQevKpPhxjtLi/dIKuNwT5j2dbwj8qBA98/aRm744xsMHM48a","role":"USER","_id":"JOUUeB1lBOVN1kYt"}
+{"firstname":"second","surname":"user","email":"user@live.com","username":"user2","password":"$2b$10$cvA1NqmQac0YG/YfC8/fJezfokIPfXMzLLyMQEYmRoetft2069sw2","role":"USER","_id":"pb87jwASts9NRzSz"}

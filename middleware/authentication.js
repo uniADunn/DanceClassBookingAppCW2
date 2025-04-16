@@ -1,5 +1,5 @@
 const userModel = require('../models/userModel'); //user model
-const bcrypt = require('bcrypt');//password encryption
+const bcrypt = require('bcryptjs');//password encryption
 const jwt = require('jsonwebtoken');//json webtoken module
 
 
@@ -27,6 +27,16 @@ exports.authenticateLogin = async (req, res, next)=>{
         }
         //check password
         bcrypt.compare(password, user.password,(err, result)=>{
+            if(err){
+                console.log('error hashing passwor');
+                // credentials are incorrect
+                console.log('incorrect credentials');
+                res.status(401).render('user/login',{
+                    title: 'login page',
+                    error_credentials: 'incorrect credentials',
+                    formData: req.body    
+                });                
+            }
             if(result){
                 //store info in payload
                 let payload = {username: user.username, id: user._id, role:user.role};
@@ -41,14 +51,6 @@ exports.authenticateLogin = async (req, res, next)=>{
                 req.user = payload;
                 //next - endpoint
                 next();
-            }else{
-                // credentials are incorrect
-                console.log('incorrect credentials');
-                res.status(401).render('user/login',{
-                    title: 'login page',
-                    error_credentials: 'incorrect credentials',
-                    formData: req.body    
-                });                
             }
         });
     });

@@ -1,6 +1,6 @@
 const nedb = require('gray-nedb');
-const bcrypt = require('bcrypt');
-const saltRounds = process.env.SALT_ROUNDS;
+const bcrypt = require('bcryptjs');
+const salt = 10;
 // user model - used to store user data and role 
 class UserDAO {
     constructor(dbFilePath){
@@ -50,7 +50,8 @@ class UserDAO {
     create(firstname, surname, email, username, password, role){
         console.log(`creating user: ${username}...`);
 
-        return new Promise((resolve, reject)=>{
+        return new Promise(async (resolve, reject)=>{
+            const saltRounds = await bcrypt.genSalt(salt);
             bcrypt.hash(password, saltRounds).then((hash)=>{
                 var entry = {
                     firstname: firstname,

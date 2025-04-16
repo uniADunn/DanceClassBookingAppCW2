@@ -37,7 +37,7 @@ Users can do everything guests can, plus:
 - One-click booking for classes/courses (no form required)
 
 ### Admin Role
-Admins can do everything users can, plus:
+Admins can do everything users can, plus gains access to admin control page where admins can:
 - Add new classes and courses
 - Add/remove administrators
 - View management lists to:

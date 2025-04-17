@@ -49,9 +49,9 @@ class ClassesDAO{
             let location4 = 'Motherwell center lanarkshire';
             let location5 = 'East Kilbride Dance Academy';
 
-            let description1 = 'Learn the elegant basics of the waltz in a relaxed, friendly setting. Perfect for first-time dancers';
-            let description2 = 'Spicy, fun, and energetic—discover the joy of salsa with our expert instructors';
-            let description3 = 'Traditional Scottish highland dance techniques for all skill levels. Tartan optional';
+            let description1 = 'Learn the elegant basics of the waltz in a relaxed friendly setting Perfect for first time dancers';
+            let description2 = 'Spicy fun and energetic discover the joy of salsa with our expert instructors';
+            let description3 = 'Traditional Scottish highland dance techniques for all skill levels Tartan optional';
             let description4 = 'Get moving with urban dance styles—great for fitness and fun';
             let description5 = 'Polish off techniques for ballroom and Latin dances in this lively introductory session';
 
